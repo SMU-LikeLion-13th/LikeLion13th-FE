@@ -1,0 +1,108 @@
+<!-- 2주차 과제1 -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title>권동균</title>
+    <style>
+      form {
+        border: 1px solid black;
+        padding: 2rem;
+        max-width: 500px;
+        width: fit-content;
+        height: fit-content;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>로그인 화면 만들어보기</h1>
+
+    <!-- 폼 요소 -->
+    <form>
+      <p>
+        <label for="id"><b>ID</b></label
+        ><br />
+        <input type="text" id="id" name="id" />
+
+        <br />
+
+        <label for="password"><b>PASSWORD</b></label
+        ><br />
+        <input type="password" id="password" name="password" />
+      </p>
+
+      <!-- 성별 -->
+      <table>
+        <tr>
+          <td><b>성별</b></td>
+        </tr>
+        <tr>
+          <td>
+            남성<input type="radio" name="성별" value="남성" />
+          </td>
+          <td>
+            여성<input type="radio" name="성별" value="여성" />
+          </td>
+        </tr>
+      </table>
+      <br />
+
+      <!-- 좋아하는 동물 -->
+      <table>
+        <tr>
+          <td><b>좋아하는 동물</b></td>
+        </tr>
+        <tr>
+          <td>
+            <label for="lion">&#129409; 사자</label>
+            <input type="checkbox" name="동물" id="lion" />
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label for="dog">&#128054; 강아지</label>
+            <input type="checkbox" name="동물" id="dog" />
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label for="cat">&#128570; 고양이</label>
+            <input type="checkbox" name="동물" id="cat" />
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label for="panda">&#128060; 판다</label>
+            <input type="checkbox" name="동물" id="panda" />
+          </td>
+        </tr>
+      </table>
+
+      <!-- 제출 버튼 -->
+      <p><input type="submit" value="SUBMIT" /></p>
+    </form>
+
+    <!-- 링크 -->
+    <ol>
+      <li>
+        <a href="https://www.instagram.com/" target="_blank"
+          >인스타그램</a
+        >
+      </li>
+      <li>
+        <a
+          href="https://www.facebook.com/?locale=ko_KR"
+          target="_blank"
+          >페이스북</a
+        >
+      </li>
+      <li>
+        <a href="https://github.com/" target="_blank">깃허브</a>
+      </li>
+    </ol>
+  </body>
+</html>
