@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>손영준</title>
+    <style>
+      form {
+        border: 1px solid black;
+        padding: 2rem;
+        max-width: 500px;
+        width: fit-content;
+        height: fit-content;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>로그인 화면 만들어보기</h1>
+    <form>
+      <!-- ID, PASSWORD -->
+      <p>
+        <label for="id"><b>ID</b></label
+        ><br />
+        <input type="text" id="id" name="id" /><br />
+        <label for="password"><b>PASSWORD</b></label
+        ><br />
+        <input type="password" id="password" name="password" />
+      </p>
+
+      <!-- 성별 -->
+      <table>
+        <tr>
+          <td><b>성별</b></td>
+        </tr>
+        <tr>
+          <td>
+            <label>남성<input type="radio" name="성별" value="남성" /></label>
+          </td>
+          <td>
+            <label>여성<input type="radio" name="성별" value="여성" /></label>
+          </td>
+        </tr>
+      </table>
+      <br />
+
+      <!-- 좋아하는 동물 -->
+      <table>
+        <tr>
+          <td><b>좋아하는 동물</b></td>
+        </tr>
+        <tr>
+          <td>
+            <label for="lion">🦁 사자</label>
+            <input type="checkbox" name="동물" id="lion" />
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label for="dog">🐶 강아지</label>
+            <input type="checkbox" name="동물" id="dog" />
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label for="cat">🐱 고양이</label>
+            <input type="checkbox" name="동물" id="cat" />
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label for="panda">🐼 판다</label>
+            <input type="checkbox" name="동물" id="panda" />
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label for="monkey">🐵 원숭이</label>
+            <input type="checkbox" name="동물" id="monkey" />
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label for="pig">🐷 돼지</label>
+            <input type="checkbox" name="동물" id="pig" />
+          </td>
+        </tr>
+      </table>
+      <p><button type="submit">SUBMIT</button></p>
+    </form>
+
+    <!-- 링크 리스트 -->
+    <ol>
+      <li>
+        <a href="https://www.instagram.com" target="_blank">인스타그램</a>
+      </li>
+      <li><a href="https://www.facebook.com" target="_blank">페이스북</a></li>
+      <li><a href="https://www.github.com" target="_blank">깃허브</a></li>
+    </ol>
+  </body>
+</html>
