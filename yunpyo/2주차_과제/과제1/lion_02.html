@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>이윤표</title>
+    <style>
+      form {
+        border: 1px solid black;
+        padding: 2rem;
+        max-width: 500px;
+        width: fit-content;
+        height: fit-content;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1><b>로그인 화면 만들어보기</b></h1>
+    <form>
+      <label for="id"><b>ID</b></label>
+      <br />
+      <input type="text" id="id" name="id" />
+      <br />
+      <label for="password"><b>PASSWORD</b></label>
+      <br />
+      <input type="password" id="password" name="password" />
+      <br />
+      <br />
+
+      <table>
+        <tr>
+          <label><b>성별</b></label>
+          <br />
+        </tr>
+        <tr>
+          <td>
+            <label for="male">남성</label>
+            <input type="radio" id="male" name="종류1" value="남성" />
+            <label for="female">여성</label>
+            <input type="radio" id="female" name="종류1" value="여성" />
+          </td>
+        </tr>
+      </table>
+      <br />
+
+      <table>
+        <tr>
+          <label><b>좋아하는 동물</b></label>
+          <br />
+        </tr>
+        <tr>
+          <label for="lion">🦁사자</label>
+          <input type="checkbox" id="lion" name="animal" value="사자" />
+          <br />
+          <label for="dog">🐶강아지</label>
+          <input type="checkbox" id="dog" name="animal" value="강아지" />
+          <br />
+          <label for="cat">🐱고양이</label>
+          <input type="checkbox" id="cat" name="animal" value="고양이" />
+          <br />
+          <label for="panda">🐼판다</label>
+          <input type="checkbox" id="panda" name="animal" value="판다" />
+        </tr>
+      </table>
+      <br />
+
+      <p><input type="submit" value="SUBMIT" /></p>
+    </form>
+
+    <ol>
+      <li><a href="https://www.instagram.com">인스타그램</a></li>
+      <li><a href="https://www.facebook.com">페이스북</a></li>
+      <li><a href="https://www.github.com">깃허브</a></li>
+    </ol>
+  </body>
+</html>
