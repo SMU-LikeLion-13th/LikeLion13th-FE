@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Park tae jeong</title>
+    <style>
+      form {
+        border: 1px solid black;
+        padding: 2rem;
+        max-width: 500px;
+        width: fit-content;
+        height: fit-content;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>로그인 화면 만들어보기</h1>
+    <div>
+      <form action="">
+        <b><label for="id">ID</label></b>
+        <br />
+        <input type="text" id="id" name="id" /><br /><br />
+        <b><label for="pw">PASSWORD</label></b>
+        <br />
+        <input type="password" id="pw" name="pw" /><br /><br />
+        <table>
+          <tr>
+            <b>성별</b>
+          </tr>
+          <tr>
+            <td>
+              남성
+              <input type="radio" name="gender" value="남성" />
+            </td>
+            <td>
+              여성
+              <input type="radio" name="gender" value="여성" />
+            </td>
+          </tr>
+        </table>
+        <br />
+        <table>
+          <tr>
+            <b>관심 동물</b>
+          </tr>
+          <tr>
+            <td>
+              사자
+              <input type="checkbox" name="animal" value="사자" />
+            </td>
+          </tr>
+          <tr>
+            <td>
+              강아지
+              <input type="checkbox" name="animal" value="강아지" />
+            </td>
+          </tr>
+          <tr>
+            <td>
+              고양이
+              <input type="checkbox" name="animal" value="고양이" />
+            </td>
+          </tr>
+          <tr>
+            <td>
+              판다
+              <input type="checkbox" name="animal" value="판다" />
+            </td>
+          </tr>
+        </table>
+        <br />
+        <button type="submit">SUBMIT</button>
+      </form>
+    </div>
+    <ol>
+      <li>
+        <a href="https://www.instagram.com/">인스타그램</a>
+      </li>
+      <li>
+        <a
+          href="https://www.facebook.com/login/?next=https%3A%2F%2Fwww.facebook.com%2F%3Flocale%3Dko_KR"
+          >페이스북</a
+        >
+      </li>
+      <li>
+        <a href="https://github.com/SMU-LikeLion-13th/LikeLion13th-FE"
+          >깃허브</a
+        >
+      </li>
+    </ol>
+  </body>
+</html>
