@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      form {
+        border: 1px solid black;
+        padding: 2rem;
+        max-width: 500px;
+        width: fit-content;
+        height: fit-content;
+      }
+    </style>
+    <title>오예은 2주차 과제</title>
+  </head>
+  <body>
+    <h1>로그인 화면 만들어보기</h1>
+    <form>
+      <p>
+        <b>ID</b><br /><input type="text" /><br />
+        <b>PASSWORD</b><br /><input type="password" />
+        <!-- 아이디와 비번 따로 p로 묶으면 아이디와 비번 사이 공간이 조금 생겨서 
+        예시처럼 공간을 아예 없애기 위해 p하나로 묶고 br을 사용 했어용..-->
+      </p>
+      <table>
+        <tr>
+          <b>성별</b>
+        </tr>
+        <tr>
+          <td>
+            <label for="man">남성</label>
+            <input type="radio" name="gender" value="남성" id="man" />
+          </td>
+          <td>
+            <label for="woman">여성</label>
+            <input type="radio" name="gender" value="여성" id="woman" />
+          </td>
+        </tr>
+      </table>
+      <br />
+      <table>
+        <tr>
+          <b>좋아하는 동물</b>
+        </tr>
+        <tr>
+          <td>
+            <label for="lion">🦁사자</label>
+            <input type="checkbox" name="animal" value="사자" id="lion" />
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label for="puppy">🐶강아지</label>
+            <input type="checkbox" name="animal" value="강이지" id="puppy" />
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label for="cat">😺고양이</label>
+            <input type="checkbox" name="animal" value="고양이" id="cat" />
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label for="panda">🐼판다</label>
+            <input type="checkbox" name="animal" value="판다" id="panda" />
+          </td>
+        </tr>
+      </table>
+
+      <p><input type="submit" value="SUBMIT" /></p>
+    </form>
+    <ol>
+      <li>
+        <a href="https://www.instagram.com/ohyeahh_519/" target="_blank"
+          >인스타그램</a
+        >
+      </li>
+      <li>
+        <a href="https://www.facebook.com/?locale=ko_KR" target="_blank"
+          >페이스북</a
+        >
+      </li>
+      <li><a href="https://github.com/Yeeun519" target="_blank">깃허브</a></li>
+    </ol>
+  </body>
+</html>
