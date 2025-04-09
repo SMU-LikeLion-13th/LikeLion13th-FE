@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form>
+      <p>아이디 : <input placeholder="아이디" /></p>
+      <!-- 아이디는 type="아이디" 안 써도 됨-->
+      <!-- type="email" email 형식 아니면 경고 뜸 -->
+      <p>비밀번호 : <input type="password" placeholder="비밀번호" /></p>
+      <table>
+        <tr>
+          성별
+        </tr>
+        <tr>
+          <td>
+            남성<input type="radio" name="gender" value="남성" /> 여성<input
+              type="radio"
+              name="gender"
+              value="여성"
+            />
+          </td>
+        </tr>
+      </table>
+      <table>
+        <tr>
+          취미
+        </tr>
+        <td>
+          <label for="축구">축구</label>
+          <input type="checkbox" name="취미" value="축구" id="축구" />
+        </td>
+        <td>
+          <label for="야구">야구</label>
+          <input type="checkbox" name="취미" value="야구" id="야구" />
+        </td>
+        <td>
+          <label for="그림">축구</label>
+          <input type="checkbox" name="취미" value="그림" id="그림" />
+        </td>
+      </table>
+      <input type="submit" />
+    </form>
+  </body>
+</html>
