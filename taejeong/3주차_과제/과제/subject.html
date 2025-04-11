@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <style>
+        li {
+            list-style: none;
+            /* 기본 리스트 스타일 제거 */
+            padding: 0;
+            /* 기본 패딩 제거 */
+        }
+
+        p {
+            line-height: 1.4;
+            /* 줄 간격 조절 */
+            margin: 4px 0;
+            /* 위아래 여백도 최소화 */
+        }
+
+        h2 {
+            margin: 0;
+            padding: 0;
+            /* 기본 패딩 제거 */
+            font-size: 20px;
+            /* 제목 크기 조절 */
+            font-weight: bold;
+            /* 제목 두껍게 */
+            color: #333;
+            /* 제목 색상 조절 */
+        }
+
+
+        .profileImg {
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 50%;
+            box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
+            transition: transform 1s ease-in-out;
+
+        }
+
+
+        .profileImg:hover {
+            transform: scale(1.1) rotate(360deg);
+        }
+
+
+
+        .container {
+            background-color: rgb(224, 189, 189);
+            width: 700px;
+            height: 750px;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            border-radius: 10px;
+        }
+
+        .profile {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: rgb(254, 214, 214);
+            text-align: center;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px;
+        }
+
+        .profile-text {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 4px;
+            margin-top: 10px;
+        }
+
+        .name {
+            font-size: 20px;
+            font-weight: bold;
+            color: #222;
+        }
+
+        .info {
+            font-size: 14px;
+            color: #555;
+        }
+
+        .skill-box {
+            display: flex;
+            flex-direction: row;
+            gap: 10px;
+        }
+
+        .footer {
+            position: absolute;
+            bottom: 10PX;
+            font-size: 12px;
+            color: #777;
+            width: 100%;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="profile">
+            <img class="profileImg" src="/f7d6cabac6060f0cb8576df397db12e3.gif" />
+            <div class="profile-text">
+                <p class="name">박태정</p>
+                <p class="info">상명대학교 3학년 | 컴퓨터과학과 | 프론트엔드 개발자</p>
+            </div>
+
+        </div>
+        <div class="detail-container">
+            <ul>
+                <li>
+                    <div class="introduce">
+                        <h2><i class="fa-solid fa-user"></i> 자기소개</h2>
+                        <p>상명대학교 3학년 박태정입니다.</p>
+                        <p>프론트엔드 개발자를 꿈꾸고 있습니다.</p>
+                        <p>열심히 배우고 성장하는 개발자가 되겠습니다.</p>
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <h2><i class="fa-solid fa-thumbtack"></i> 현재활동</h2>
+                        <p>상명대학교 컴퓨터과학과 3학년 재학중</p>
+                        <p>멋쟁이사자처럼 13기 활동중</p>
+                        <p>구름톤 유니브 프론트 활동중</p>
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <h2><i class="fa-solid fa-laptop-code"></i> 기술스택</h2>
+                        <div class="skill-box">
+                            <p><i class="fa-brands fa-html5"></i> HTML</p>
+                            <p><i class="fa-brands fa-css3-alt"></i> CSS</p>
+                            <p><i class="fa-brands fa-js"></i> JavaScript</p>
+                            <p><i class="fa-brands fa-react"></i> React</p>
+                            <p><i class="fa-brands fa-node-js"></i> Node.js</p>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <h2><i class="fa-solid fa-rocket"></i> 프로젝트 경험</h2>
+                        <p>아직 이렇다 할 프로젝트는 없지만 올해 많은 결과를 만들겠습니다.</p>
+                    </div>
+                </li>
+
+            </ul>
+
+            <p class="footer">2025 박태정 | 상명대학교 컴퓨터과학과 | Frontend Developer</p>
+        </div>
+
+</body>
+
+</html>
