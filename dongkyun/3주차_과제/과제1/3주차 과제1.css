@@ -1,0 +1,87 @@
+body {
+  margin: 0;
+  background-color: #f7fafb;
+}
+
+.container-box {
+  max-width: 600px;
+  min-height: 60vh;
+  background-color: white;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding-bottom: 60px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+.top {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  margin-top: 30px;
+  padding: 0 20px;
+}
+
+/* img 태그 선택자로 수정 및 그림자 추가*/
+img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  box-shadow: 0px 0px 20px black;
+}
+
+.name {
+  font-size: 24px;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.information {
+  color: gray;
+  font-size: 14px;
+  text-align: center;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 0 20px;
+}
+
+.box {
+  padding: 10px 0;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.title {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+/* class 하나로 묶기 */
+.box-content {
+  color: #333;
+  font-size: 15px;
+  line-height: 25px;
+}
+
+.activity-content ul {
+  padding-left: 20px;
+}
+
+.project-content ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.watermark {
+  color: #ccc;
+  font-size: 12px;
+  text-align: center;
+}
