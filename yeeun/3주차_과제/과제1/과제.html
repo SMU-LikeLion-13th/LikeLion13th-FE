@@ -2,13 +2,20 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta
-      name="viewport"
-      content="width=
-    , initial-scale=1.0"
-    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>자기소개 페이지</title>
     <style>
+      body {
+        display: flex;
+        justify-content: center;
+      }
+      .container {
+        max-width: 900px;
+        padding: 40px 20px;
+        background-color: #fdfdfd;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+        border-radius: 12px;
+      }
       .profile {
         position: relative;
         display: flex;
@@ -82,65 +89,67 @@
     </style>
   </head>
   <body>
-    <div class="profile">
-      <div class="img_container">
-        <img src="yeeun.jpg" />
+    <div class="container">
+      <div class="profile">
+        <div class="img_container">
+          <img src="yeeun.jpg" />
+        </div>
+        <h1>오예은</h1>
+        <ul class="profile_ul">
+          <li>상명대학교 3학년&nbsp;&nbsp;|</li>
+          <li>휴먼지능정보공학과&nbsp;&nbsp;|</li>
+          <li>프론트엔드 개발자</li>
+        </ul>
       </div>
-      <h1>오예은</h1>
-      <ul class="profile_ul">
-        <li>상명대학교 3학년&nbsp;&nbsp;|</li>
-        <li>휴먼지능정보공학과&nbsp;&nbsp;|</li>
-        <li>프론트엔드 개발자</li>
-      </ul>
-    </div>
-    <div class="content">
-      <section>
-        <h3>👋자기소개</h3>
-        <p>
-          저는 상명대 22학번인 휴먼지능 정보공학과에 재학중은 오예은 이라고
-          합니다. <br />
-          저는 멋쟁이 사사처럼 동아리의 프론트엔드 하기사자 13기 입니다. 앞으로
-          html, css,JavaScript를 비롯한 다양한 프론트엔드 개발 스킬을 배워 멋진
-          프로젝트를 많이 만들고자 합니다.
-        </p>
-      </section>
-      <section>
-        <h3>📚현재활동</h3>
-        <ul class="content_ul">
-          <li><b>-전공:</b> 휴먼지능정보공학과</li>
-          <li><b>-진행중:</b> 멋쟁이사자처럼 프론트엔드 아기사지 13기</li>
-          <li><b>-목표: </b> JavaScript 배우기, 팀 프로젝트 경험 쌓기</li>
-          <li><b>-관심분야:</b> UI/UX디자인, 기획설계 부분분</li>
+      <div class="content">
+        <section>
+          <h3>👋자기소개</h3>
+          <p>
+            저는 상명대 22학번인 휴먼지능 정보공학과에 재학중은 오예은 이라고
+            합니다. <br />
+            저는 멋쟁이 사사처럼 동아리의 프론트엔드 하기사자 13기 입니다.
+            앞으로 html, css,JavaScript를 비롯한 다양한 프론트엔드 개발 스킬을
+            배워 멋진 프로젝트를 많이 만들고자 합니다.
+          </p>
+        </section>
+        <section>
+          <h3>📚현재활동</h3>
+          <ul class="content_ul">
+            <li><b>-전공:</b> 휴먼지능정보공학과</li>
+            <li><b>-진행중:</b> 멋쟁이사자처럼 프론트엔드 아기사지 13기</li>
+            <li><b>-목표: </b> JavaScript 배우기, 팀 프로젝트 경험 쌓기</li>
+            <li><b>-관심분야:</b> UI/UX디자인, 기획설계 부분분</li>
+          </ul>
+        </section>
+        <section>
+          <h3>🛠기술 스택</h3>
+          <p>Html, CSS, JavaScript, figma 등등</p>
+        </section>
+        <section>
+          <h3>💼프로젝트 경험</h3>
+          <ul class="content_ul">
+            <li>
+              <b>바이오헬스 아이디어톤(COSS톤):</b> 감정 분석 및 스트레스 완화
+              서비스 및 웨어러블 디바이스 기기
+            </li>
+            <li>
+              <b>산호세 연수 중 서비스 창업 프로젝트:</b> 반려견 유전자 분석을
+              통한 맞춤형 펫케어 서비스
+            </li>
+            <li>
+              <b>게임 앱 개발:</b> 뇌파 측정기기를 활용한 뇌 훈련 모바일 앱 게임
+              개발
+            </li>
+          </ul>
+        </section>
+      </div>
+      <footer>
+        <ul class="footer_ul">
+          <li>2025 오예은&nbsp;&nbsp;|</li>
+          <li>상명대학교 휴먼지능정보공학과&nbsp;&nbsp;|</li>
+          <li>Fronted Developer</li>
         </ul>
-      </section>
-      <section>
-        <h3>🛠기술 스택</h3>
-        <p>Html, CSS, JavaScript, figma 등등</p>
-      </section>
-      <section>
-        <h3>💼프로젝트 경험</h3>
-        <ul class="content_ul">
-          <li>
-            <b>바이오헬스 아이디어톤(COSS톤):</b> 감정 분석 및 스트레스 완화
-            서비스 및 웨어러블 디바이스 기기
-          </li>
-          <li>
-            <b>산호세 연수 중 서비스 창업 프로젝트:</b> 반려견 유전자 분석을
-            통한 맞춤형 펫케어 서비스
-          </li>
-          <li>
-            <b>게임 앱 개발:</b> 뇌파 측정기기를 활용한 뇌 훈련 모바일 앱 게임
-            개발
-          </li>
-        </ul>
-      </section>
+      </footer>
     </div>
-    <footer>
-      <ul class="footer_ul">
-        <li>2025 오예은&nbsp;&nbsp;|</li>
-        <li>상명대학교 휴먼지능정보공학과&nbsp;&nbsp;|</li>
-        <li>Fronted Developer</li>
-      </ul>
-    </footer>
   </body>
 </html>
