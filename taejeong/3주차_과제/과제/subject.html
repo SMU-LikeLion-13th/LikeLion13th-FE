@@ -7,6 +7,17 @@
     <title>Document</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
     <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #f0f0f0;
+            height: 100vh;
+            /* 플렉스 박스 사용시 길이 정확히 명시해야
+            중앙 정렬이 잘 됨*/
+            margin: 0;
+        }
+
         li {
             list-style: none;
             /* 기본 리스트 스타일 제거 */
@@ -40,13 +51,29 @@
             object-fit: cover;
             border-radius: 50%;
             box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
-            transition: transform 1s ease-in-out;
 
         }
 
+        @keyframes bounceAndSpin {
+            0% {
+                transform: scale(1) rotate(0deg);
+            }
+
+            30% {
+                transform: scale(1.2) rotate(90deg);
+            }
+
+            60% {
+                transform: scale(0.9) rotate(180deg);
+            }
+
+            100% {
+                transform: scale(1.1) rotate(360deg);
+            }
+        }
 
         .profileImg:hover {
-            transform: scale(1.1) rotate(360deg);
+            animation: bounceAndSpin 1.2s ease-in-out;
         }
 
 
@@ -55,10 +82,6 @@
             background-color: rgb(224, 189, 189);
             width: 700px;
             height: 750px;
-            position: absolute;
-            left: 50%;
-            top: 50%;
-            transform: translate(-50%, -50%);
             border-radius: 10px;
         }
 
@@ -101,8 +124,8 @@
         }
 
         .footer {
-            position: absolute;
-            bottom: 10PX;
+            top: 50px;
+            position: relative;
             font-size: 12px;
             color: #777;
             width: 100%;
@@ -114,7 +137,7 @@
 <body>
     <div class="container">
         <div class="profile">
-            <img class="profileImg" src="/f7d6cabac6060f0cb8576df397db12e3.gif" />
+            <img class="profileImg" src="/과제/f7d6cabac6060f0cb8576df397db12e3.gif" alt="프로필 이미지" />
             <div class="profile-text">
                 <p class="name">박태정</p>
                 <p class="info">상명대학교 3학년 | 컴퓨터과학과 | 프론트엔드 개발자</p>
