@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>실습 3</title>
+    <style>
+      .box {
+        text-align: center;
+        line-height: 100px;
+        width: 100px;
+        height: 100px;
+        font-weight: bold;
+      }
+      .container {
+        width: 700px;
+        height: 500px;
+        border: 3px solid black;
+        position: relative;
+        margin: 100px auto;
+      }
+      .box1 {
+        background-color: grey;
+      }
+      .box2 {
+        background-color: red;
+        position: absolute;
+        top: 50px;
+        left: 100px;
+      }
+      .box3 {
+        background-color: blue;
+        position: relative;
+        top: 20px;
+        left: 20px;
+      }
+      .box4 {
+        background-color: green;
+        position: fixed;
+        right: 20px;
+        top: 50px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="box box1">static</div>
+      <div class="box box2">absolute</div>
+      <div class="box box3">relative</div>
+    </div>
+    <div class="box box4">fixed</div>
+  </body>
+</html>
