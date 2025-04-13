@@ -31,3 +31,30 @@ git commit -m "FIX: 피드백 기반 코드 수정"
  ┃ ┃ ┗ ...  
  ┗ ...
  ```
+### 🛠 Git 사용 방법
+
+📌 1. 저장소 클론하기
+```
+git clone 레포지토리 주소
+cd 레포지토리 이름
+```
+📌 2. 본인 브랜치로 이동 
+(git branch로 현재 branch 위치를 조회할 수 있습니다!)
+```
+git branch 
+git checkout 이름(영문)
+```
+📌 3. 미션 폴더 생성 & 코드 작성
+(이 방법이 익숙치 않으시면 폴더에 직접 추가 후 진행하셔도 됩니다.)
+```
+mkdir -p 이름/n주차_미션/미션1
+```
+📌 4. 변경 사항 저장 & 푸시
+```
+git add .
+git commit -m "FEAT: n주차 미션1 완료"
+git push origin 이름
+```
+📌 5. GitHub에서 PR(Pull Request) 요청
+
+GitHub에서 본인 브랜치 → main 브랜치로 PR을 생성하고, 운영진에게 코드 리뷰 요청하세요! ✨
