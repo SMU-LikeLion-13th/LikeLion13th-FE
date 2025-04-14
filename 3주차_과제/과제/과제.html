@@ -9,13 +9,21 @@
     * {
       margin: 0;
       padding: 10px;
+      }
+    img {
+      margin: auto;
+      padding: 0;
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.3);
+      display: block; 
     }
+    
     .profile {
         text-align: center;
-    }
-    img{
-        width: 300px;
-        height: 300px;
+
+        align-items: center;
     }
     .title{
       font-size: 20px;
@@ -37,30 +45,25 @@
   <body>
     <div class="container">
         <div class="profile">
-            <img src="./character.png" />
+            <img src="./character.jpg" alt="프로필 사진">
             <h1>신유정</h1>
             <div class="introduction">
               <p>상명대학교 4학년 | 컴퓨터과학과 | 프론트엔드 개발자</p>
             </div>
         </div>
-        <p></p>
+
         <div class="introduce">
           <div class="title">
-            <p>
               <b>| 👋🏻 자기소개</b>
-            </p>
           </div>
           <div class="content">
             <p>저는 현재 상명대학교 컴퓨터과학전공에 재학 중인 4학년 신유정입니다.</p>
             <p>프론트엔드 개발에 흥미를 느껴 멋쟁이사자처럼 동아리에서 프론트엔드를 배우고 공부하며 노력하고 있습니다.</p>
           </div>
         </div>
-        <p></p>
         <div class="activity">
           <div class="title">
-            <p>
               <b>| 📚 현재 활동</b>
-            </p>
           </div>
           <div class="content">
             <p><b>- 전공</b>: 상명대학교 컴퓨터과학과</p>
@@ -68,22 +71,19 @@
             <p><b>- 관심 분야</b>: 프론트엔드 개발</p>
           </div>
         </div>
-        <p></p>
         <div class="technology">
           <div class="title">
-            <p>
               <b>| 🛠️ 기술 스택</b>
-            </p>
           </div>
           <div class="content">
           <p>HTML, CSS, JavaScript, Figma</p>
           </div>
         </div>
     </div>
+    <footer>
+      <div class="copyright">
+          © 2025 신유정 | 상명대학교 컴퓨터과학과 | Frontend Developer</p>
+      </div>
+  </footer>
   </body>
-  <footer>
-    <div class="copyright">
-        © 2025 신유정 | 상명대학교 컴퓨터과학과 | Fronted Developer</p>
-    </div>
-</footer>
 </html>
