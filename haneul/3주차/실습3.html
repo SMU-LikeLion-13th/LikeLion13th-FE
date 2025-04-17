@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      .container {
+        width: 500px;
+        height: 300px;
+        border: 2px solid black;
+        margin: 50px auto;
+        position: relative;
+      }
+      .box {
+        width: 100px;
+        height: 100px;
+        text-align: center;
+        color: white;
+        line-height: 100px;
+        font-weight: bold;
+      }
+      .box1 {
+        position: static;
+        background-color: grey;
+      }
+      .box2 {
+        position: absolute;
+        background-color: blue;
+        top: 50px;
+        left: 50px;
+      }
+      .box3 {
+        position: relative;
+        background-color: red;
+        top: 20px;
+        left: 20px;
+      }
+      .box4 {
+        position: fixed;
+        background-color: green;
+        top: 20px;
+        right: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="box box1">static</div>
+      <div class="box box2">absolute</div>
+      <div class="box box3">relative</div>
+    </div>
+    <div class="box box4">fixed</div>
+  </body>
+</html>
