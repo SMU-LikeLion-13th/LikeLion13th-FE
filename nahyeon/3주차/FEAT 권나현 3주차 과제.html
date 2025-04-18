@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>week3_과제</title>
+
+    <script src="https://kit.fontawesome.com/728b949d00.js"
+    crossorigin="anonymous"></script>
+  </head>
+
+  <!-- 필수요소 : class 활용 , flex 사용,//// -->
+  <!-- margin, padding 요소 활용 -->
+
+  <style>
+    /*모든 요소가 기본 여백 제거 + box-sizing: border-box 상태로 초기화*/
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    /* 도형 가운데 정렬 */
+    body {
+      height: 100vh; /*세로 가운데 정렬을 위해 높이 지정
+      vh(viewport height): 화면 세로 길이의 % 단위
+      -> 100vh는 브라우저 화면 높이 100%(꽉 찬 높이)
+      -> 100hv 주는 이유는 안에서 flex로 수직 가운데 정렬하려고
+      (원래 height의 기본값은 auto임 <- 자식 요소의 높이만큼만 늘어남
+      근데 flex + align-items: center 쓰려면 body가 얼마나 큰지 알아야함
+      안하면 세로 정렬 아예 안 먹힘)*/
+      display: flex;
+      justify-content: center;
+      align-items: center; /*세로 정중앙 정렬*/
+      }
+
+    .box {
+      width: 500px;
+      height: 695px;
+      box-sizing: border-box;
+      /*height 100hv 줘버리면 padding이 먹혀서 짧아짐
+      padding은 height 바깥이 아니라 안에서 공간 차지함*/
+
+      background-color: white;
+      border-radius: 5%;
+      box-shadow: 0px 5px 20px lightgray;
+      /* margin-top: 0; box를 위에 딱 붙이기 -> 왜 없애도 붙어있지?...*/
+
+      /*circle 위치 조정하려고 넣은 애들
+      근데 circle position이 absolute여서 안 넣어도 됨
+      display: flex;
+      justify-content: center; */
+
+      /*text*/
+      display: flex; /*box 안에 있는 애들을 어떻게 배치할까 정하는 것
+      flex를 쓰면 box 안의 자식요소가 가로or세로로 정렬됨
+      (안쓰면 위에서 아래로 쌓임)*/
+      flex-direction: column; /*세로로 배치됨. 기본값은 row임*/
+      align-items: center; /*수평 중앙*/
+
+      position: relative;
+      padding-top: 120px; /*circle이 absoulte라 공간 확보
+      (absoulte는 레이아웃에서 아예 빠진 애니까 얘는 없는 애임
+      그래서 box에 padding 넣는 걸로 윗 공간을 채워야됨)*/
+    }
+
+    .circle {
+      width: 150px;
+      height: 150px;
+      background-color: white;
+      box-shadow: 0px 5px 12px rgb(177, 177, 177);
+      border-radius: 50%;
+
+      position: absolute; /*absoulte는 문서의 흐름에서 빠지기 때문에
+      자기 위치는 있으나, 레이아웃 상에선 없는 취급임
+      ex) absolute 설정하면 다른 class가 얘 위에 쌓이는데,
+      absolute가 아니고 static이나 relative면 다음 class는 그 아래로 쌓임*/
+      top: 15%;
+      left: 50%;
+      transform: translate(-50%, -50%); /*수평 가운데 정렬*/
+
+      /*hover <- 사진 변경하기*/
+      overflow: hidden;
+      transition: 0.3s ease-in-out; /*부드럽게 연결*/
+    }
+
+    .circle img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      position: absolute;
+      top: 0;
+      left: 0;
+      transition: opacity 0.1s ease-in-out;
+    }
+
+    /* Default 이미지 */
+    .circle .img1 {
+      opacity: 1;
+      transition: opacity 0.3s ease-in-out;
+    }
+
+    /* Hover 이미지*/
+    .circle:hover .img1 {
+      opacity: 0;
+    }
+
+    .circle:hover .img2 {
+      opacity: 1;
+    }
+
+    /*hover 이미지 숨기기*/
+    .circle .img2 {
+      opacity: 0;
+    }
+
+    /*text class*/
+    .text_Head {
+      margin-top: 77px;
+      font-size: 20px;
+      color: rgb(37, 37, 37);
+    }
+
+    .text_Head2 {
+      margin-top: 7px;
+      font-size: 13px;
+      color: rgb(93, 93, 93);
+    }
+
+    .text_content_head {
+      margin-top: 17px;
+      margin-left: 30px;
+      font-size: 17px;
+      color: rgb(10, 29, 66);
+      font-weight: bold;
+      align-self: flex-start; /*왼쪽 정렬로 넣기!!*/
+      /*align-items : 부모가 자식들 전부를 정렬
+      align-self : 자식이 자기만 따로 정렬
+      -> flex-start: 교차축의 시작점(왼or위)
+      -> flex-end: 교차축 끝점(오or아래)
+      -> center: 교차축 가운데*/
+    }
+
+    .text_content {
+      margin-top: 10px;
+      margin-left: 30px;
+      font-size: 13px;
+      color: rgb(63, 63, 63);
+      position: relative;
+      align-self: flex-start;
+    }
+
+    .pipe {
+      font-weight: 900;
+      font-size: 17px;
+    }
+  </style>
+  <body>
+    <div class="box">
+      <div class="circle">
+        <img class="img1" src="finn.jpg" alt="Default Image" />
+        <img class="img2" src="finn_me.jpg" alt="Change Image" />
+      </div>
+      <div class="text_Head"><b>Nahyeon Kwon</b></div>
+      <div class="text_Head2">
+        상명대학교 3학년 | 휴먼지능정보공학전공 | 프론트엔드 개발자
+      </div>
+      <!-- ㄴ> 프론트엔드 개발자에서 그대로 <br>하면 <br> 뒤 텍스트는 인라인 텍스트 흐름이어서 왼쪽 정렬됨 -->
+      
+      
+      <div class="text_content_head">
+        <span class="pipe"><b>|</b></span>
+        <i class="fa-solid fa-hand"> </i>
+         자기소개
+      </div>
+      <div class="text_content">
+        저는 현재 상명대학교 휴먼지능정보공학전공에 재학 중인 3학년
+        권나현입니다.
+      </div>
+      <div class="text_content" style="margin-top: 1px">
+        프론트엔드 개발에 흥미를 느낍니다.
+      </div>
+
+      <div class="text_content_head">
+        <span class="pipe"><b>|</b></span> <i class="fa-solid fa-receipt"></i>
+        현재 활동
+      </div>
+      <div class="text_content">
+        - <b>전공:</b> 상명대학교 휴먼지능정보공학전공
+      </div>
+      <div class="text_content" style="margin-top: 2px">
+        - <b>진행 중:</b> 멋쟁이사자처럼 13기 아기사자
+      </div>
+      <div class="text_content" style="margin-top: 2px">
+        - <b>목표: <span style="color: rgb(255, 44, 164);">웹 Challenger</span></b>
+      </div>
+      <div class="text_content" style="margin-top: 2px">
+        - <b>기술 스택:</b> Figma, HTML, CSS 등
+      </div>
+
+      <div class="text_content_head">
+        <span class="pipe"><b>|</b></span>
+        <i class="fa-solid fa-screwdriver-wrench"></i>
+        기술 스택
+      </div>
+      <div class="text_content">
+        Figma, HTML, CSS 등
+      </div>
+
+      <div class="text_content_head">
+        <span class="pipe"><b>|</b></span>
+        <i class="fa-solid fa-briefcase"></i>
+        프로젝트 경험
+      </div>
+      <div class="text_content">
+        <b>SM@ Biohealth COSSTHON:</b> 안면장애 재활 치료 어플리케이션
+      </div>
+      <div class="text_content" style="margin-top: 2px;">
+        <b>EGO: </b> 장소 추천과 하루 일정 설계를 지원하는 맞춤형 서비스
+      </div>
+
+      <div class="text_Head2" style="margin-top: 25px; font-size: 10px;">
+        ⓒ 2025 권나현 | 상명대학교 휴먼지능정보공학전공 | Frontend Developer
+      </div>
+      </div>
+    </div>
+  </body>
+</html>
