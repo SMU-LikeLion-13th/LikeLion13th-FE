@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Box model 실습</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      .container {
+        border: 2px solid black;
+        width: 500px;
+        height: 300px;
+        margin: 50px auto;
+        position: relative;
+      }
+      .box {
+        width: 100px;
+        height: 100px;
+        color: white;
+        text-align: center;
+        line-height: 100px;
+        font-weight: bold;
+      }
+      .static {
+        background-color: gray;
+        position: static;
+      }
+      .relative {
+        background-color: blue;
+        top: 20px;
+        left: 20px;
+        position: relative;
+      }
+      .absolute {
+        background-color: red;
+        top: 50px;
+        left: 50px;
+        position: absolute;
+      }
+      .fixed {
+        background-color: green;
+        top: 20px;
+        right: 20px;
+        position: fixed;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="box static">static</div>
+      <div class="box relative">relative</div>
+      <div class="box absolute">absolute</div>
+    </div>
+  </body>
+  <div class="box fixed">fixed</div>
+</html>
