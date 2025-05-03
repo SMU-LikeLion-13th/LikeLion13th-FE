@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Box model 실습</title>
+    <style>
+      /** {
+        margin: 5px;
+      }*/
+      .container1 {
+        display: grid;
+        grid-gap: 10px;
+        grid-template-rows: repeat(3, 50px);
+        grid-template-columns: repeat(3, 150px);
+      }
+      .box {
+        height: 40px;
+        background-color: yellow;
+        text-align: center;
+      }
+      .box:nth-child(2n) {
+        background-color: aqua;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container1">
+      <div class="box">1</div>
+      <div class="box">2</div>
+      <div class="box">3</div>
+      <div class="box">4</div>
+      <div class="box">5</div>
+      <div class="box">6</div>
+      <div class="box">7</div>
+    </div>
+  </body>
+</html>
