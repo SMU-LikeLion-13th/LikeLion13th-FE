@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>flexgrid1</title>
+    <style>
+      body{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+      }
+      .container1{
+        display: flex;
+        flex-wrap: wrap;
+        width: 320px;
+        border: 2px solid black;
+        gap: 10px;
+        text-align: center;
+        padding: 3px;
+      }
+      .container2{
+        display: flex;
+        border: 2px solid black;
+        gap: 10px;
+        flex-wrap: nowrap;
+        width: 320px;
+        text-align: center;
+        padding: 3px;
+      }
+      .box{
+        background-color: salmon;
+        width: 100px;
+        height: 100px;
+        flex-shrink: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container1">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+        <div class="box">4</div>
+        <div class="box">5</div>
+        <div class="box">6</div>
+    </div>
+      <div class="container2">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+        <div class="box">4</div>
+        <div class="box">5</div>
+        <div class="box">6</div>
+      </div>
+    </div>
+  </body>
+</html>
