@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>실습1</title>
+    <style>
+      .container {
+        display: flex;
+        width: 600px;
+        border: solid 2px;
+        color: black;
+        margin: 30px;
+      }
+      .container1 {
+        flex-wrap: wrap;
+      }
+      .container2 {
+        flex-wrap: nowrap;
+      }
+
+      .box {
+        background-color: coral;
+        width: 50px;
+        margin: 4px;
+        padding: 50px;
+        flex: 1 0 50px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container container1">
+      <div class="box">1</div>
+      <div class="box">2</div>
+      <div class="box">3</div>
+      <div class="box">4</div>
+      <div class="box">5</div>
+      <div class="box">6</div>
+    </div>
+    <div class="container container2">
+      <div class="box">1</div>
+      <div class="box">2</div>
+      <div class="box">3</div>
+      <div class="box">4</div>
+      <div class="box">5</div>
+      <div class="box">6</div>
+    </div>
+  </body>
+</html>
