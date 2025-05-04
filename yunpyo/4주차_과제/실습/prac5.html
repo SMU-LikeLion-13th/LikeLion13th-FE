@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Box model 실습</title>
+    <style>
+      /** {
+        margin: 5px;
+      }*/
+      .container1 {
+        display: grid;
+        grid-template-areas:
+          "header header header header"
+          "main main . sidebar"
+          "main main . sidebar"
+          "footer footer footer footer";
+      }
+      .box1 {
+        grid-area: header;
+        background-color: yellow;
+        text-align: center;
+      }
+      .box2 {
+        grid-area: main;
+        background-color: rgb(88, 88, 20);
+        text-align: center;
+      }
+      .box3 {
+        grid-area: sidebar;
+        background-color: rgb(154, 154, 101);
+        text-align: center;
+      }
+      .box4 {
+        grid-area: footer;
+        background-color: rgb(215, 215, 55);
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container1">
+      <div class="box1">header</div>
+      <div class="box2">main</div>
+      <div class="box3">sidebar</div>
+      <div class="box4">footer</div>
+    </div>
+  </body>
+</html>

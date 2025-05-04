@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Box model 실습</title>
+    <style>
+      * {
+        margin: 5px;
+      }
+      .container {
+        width: 300px;
+        height: 500px;
+        display: flex;
+        border: 2px solid black;
+        flex-direction: column-reverse;
+      }
+      .item_container {
+        display: flex;
+      }
+
+      .box {
+        background-color: green;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="item_container" style="flex-grow: 1">
+        <div class="box" style="flex-grow: 1; background-color: pink">1</div>
+        <div class="box" style="flex-grow: 2; background-color: lightblue">
+          2
+        </div>
+        <div
+          class="box"
+          style="flex-grow: 1; background-color: lightgoldenrodyellow"
+        >
+          3
+        </div>
+      </div>
+      <div class="box" style="flex-grow: 2; background-color: lightcoral">
+        4
+      </div>
+      <div class="box" style="flex-grow: 2; background-color: lightcoral">
+        5
+      </div>
+    </div>
+  </body>
+</html>
