@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    .container {
+      width: 700px;
+      border: 3px solid black;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+    }
+    .item {
+      margin: 7px;
+      padding: 5px;
+      background-color: yellow;
+    }
+    .item:nth-child(2n) {
+      background-color: rgb(171, 227, 255);
+    }
+  </style>
+  <body>
+    <div class="container">
+      <div class="item">1</div>
+      <div class="item">2</div>
+      <div class="item">3</div>
+      <div class="item">4</div>
+      <div class="item">5</div>
+      <div class="item">6</div>
+      <div class="item" style="margin-bottom: 70px">7</div>
+    </div>
+  </body>
+</html>

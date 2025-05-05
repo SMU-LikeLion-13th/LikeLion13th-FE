@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    .container {
+      width: 500px;
+      border: 3px solid black;
+      display: flex;
+      margin: 20px;
+    }
+    .container1 {
+      flex-wrap: wrap;
+    }
+
+    .container2 {
+      flex-wrap: nowrap;
+    }
+
+    .item {
+      width: 50px;
+      height: 20px;
+      background-color: rgb(255, 79, 79);
+      margin: 5px;
+      padding: 50px;
+      flex: 1 0 50px;
+    }
+  </style>
+  <body>
+    <div class="container container1">
+      <div class="item">1</div>
+      <div class="item">2</div>
+      <div class="item">3</div>
+      <div class="item">4</div>
+      <div class="item">5</div>
+      <div class="item">6</div>
+    </div>
+
+    <div class="container container2">
+      <div class="item">1</div>
+      <div class="item">2</div>
+      <div class="item">3</div>
+      <div class="item">4</div>
+      <div class="item">5</div>
+      <div class="item">6</div>
+    </div>
+  </body>
+</html>
