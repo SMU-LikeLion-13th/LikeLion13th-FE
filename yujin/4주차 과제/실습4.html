@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>실습4</title>
+    <style>
+      * {
+        color: white;
+      }
+      .container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+        height: 500px;
+        width: 400px;
+      }
+      .header {
+        background-color: coral;
+        grid-column: 1 / span 3;
+        grid-row: 1 / span 1;
+      }
+      .main {
+        background-color: skyblue;
+        grid-column: 1 / span 2;
+        grid-row: 2 / span 2;
+      }
+      .sidebar {
+        background-color: lightgreen;
+        grid-column: 3 / span 1;
+        grid-row: 2 / span 2;
+      }
+      .footer {
+        background-color: lightcoral;
+        grid-column: 1 / span 3;
+        grid-row: 4 / span 1;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">header</div>
+      <div class="main">main</div>
+      <div class="sidebar">sidebar</div>
+      <div class="footer">footer</div>
+    </div>
+  </body>
+</html>
