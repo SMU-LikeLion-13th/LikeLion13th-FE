@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .outbox {
+            border-color: black;
+        }
+
+        .inner-box {
+            background-color: rgb(208, 62, 62);
+            width: 200px;
+            height: 40px;
+            flex-shrink: 0;
+        }
+
+        .outbox1 {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            width: 650px;
+            border: 2px solid rgb(15, 15, 15);
+            padding: 5px;
+        }
+
+        .outbox2 {
+            display: flex;
+            gap: 10px;
+            border: 2px solid rgb(15, 15, 15);
+            width: 650px;
+            padding: 5px;
+            flex-wrap: nowrap;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="outobx">
+        <div class="outbox1">
+            <div class="inner-box">
+                1
+            </div>
+            <div class="inner-box">
+                2
+            </div>
+            <div class="inner-box">
+                3
+            </div>
+            <div class="inner-box">
+                4
+            </div>
+            <div class="inner-box">
+                5
+            </div>
+            <div class="inner-box">
+                6
+            </div>
+        </div>
+        <p></p>
+        <div class="outbox2">
+            <div class="inner-box">
+                1
+            </div>
+            <div class="inner-box">
+                2
+            </div>
+            <div class="inner-box">
+                3
+            </div>
+            <div class="inner-box">
+                4
+            </div>
+            <div class="inner-box">
+                5
+            </div>
+            <div class="inner-box">
+                6
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
