@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .container {
+        display: flex;
+        flex-direction: column-reverse;
+        width: 500px;
+        height: 600px;
+        border: 2px solid black;
+      }
+      .item {
+        background-color: pink;
+        margin: 2px;
+        padding: 2px;
+        flex: 1;
+      }
+      .item_container {
+        display: flex;
+        flex: 0.5;
+      }
+      .item1 {
+        background-color: skyblue;
+        flex: 1;
+        margin: 2px;
+      }
+      .item2 {
+        background-color: palegreen;
+        flex: 2;
+        margin: 2px;
+      }
+      .item3 {
+        background-color: lemonchiffon;
+        flex: 1;
+        margin: 2px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="item_container">
+        <div class="item1">1</div>
+        <div class="item2">2</div>
+        <div class="item3">3</div>
+      </div>
+      <div class="item">4</div>
+      <div class="item">5</div>
+    </div>
+  </body>
+</html>
