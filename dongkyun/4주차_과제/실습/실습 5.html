@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title>4주차 실습 5</title>
+    <style>
+      .container {
+        display: grid;
+        grid-template-rows: repeat(4, 1fr);
+        grid-template-areas:
+          "header header header header header header"
+          "main main main . sidebar sidebar"
+          "main main main . sidebar sidebar"
+          "footer footer footer footer footer footer";
+        color: white;
+        width: 380px;
+        height: 150px;
+      }
+
+      .header {
+        background-color: #ffa07a;
+        grid-area: header;
+      }
+
+      .main {
+        background-color: #add8e6;
+        grid-area: main;
+      }
+      .sidebar {
+        background-color: #8eee8f;
+        grid-area: sidebar;
+      }
+      .footer {
+        background-color: #f08080;
+        grid-area: footer;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">header</div>
+      <div class="main">main</div>
+      <div class="sidebar">sidebar</div>
+      <div class="footer">footer</div>
+    </div>
+  </body>
+</html>
