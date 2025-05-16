@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <style>
+    #shape {
+      width: 200px;
+      height: 200px;
+      background-color: blue;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="shape"></div>
+  <button onclick="rec()">사각형</button>
+  <button onclick="circle()">원</button>
+
+  <script>
+    var mybox = document.getElementById("shape");
+
+    function rec() {
+      mybox.style.borderRadius = "0";
+      mybox.style.border = "1px solid black";
+    }
+
+    function circle() {
+      mybox.style.borderRadius = "50%";
+      mybox.style.border = "1px solid black";
+    }
+  </script>
+
+</body>
+
+</html>
