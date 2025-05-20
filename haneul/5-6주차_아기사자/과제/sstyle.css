@@ -1,0 +1,120 @@
+:root {
+  --primary-color: #ff7710; /* Vibrant orange for buttons and accents */
+  --error-color: #e74c3c; /* Red for error states */
+  --gray-border: #e1e2e3; /* Light gray for default borders */
+  --text-color: #333; /* Dark text for readability */
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+#container {
+  width: 100%;
+  max-width: 400px;
+  background-color: #fff;
+  border-radius: 20px;
+  padding: 30px 25px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  margin-bottom: 25px;
+  color: var(--primary-color);
+  font-size: 24px;
+}
+
+#todolist {
+  flex: 1;
+  border: none;
+  border-radius: 999px;
+  background-color: var(--gray-border);
+  outline: none;
+}
+
+#add {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+#add-text {
+  flex: 1;
+  padding: 12px 30px;
+  border: none;
+  border-radius: 999px;
+  background-color: var(--gray-border);
+  font-size: 14px;
+  outline: none;
+}
+
+#add-btn {
+  width: 100px;
+  height: 40px;
+  border: none;
+  border-radius: 20px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btnBlack {
+  background-color: var(--primary-color);
+  color: #fff;
+}
+
+#todo-list {
+  list-style: none;
+  padding: 0;
+}
+
+script {
+  display: none;
+}
+
+ul#todo-list {
+  list-style: none;
+  padding: 0;
+}
+
+li.todo-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 16px;
+  background-color: #f9fafb;
+  border-radius: 12px;
+  margin-top: 10px;
+  font-size: 16px;
+}
+
+.todo-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.todo-left input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  accent-color: #f26b00;
+}
+
+.delete-btn {
+  cursor: pointer;
+  font-size: 20px;
+  color: #999;
+}
+
+.delete-btn:hover {
+  color: var(--error-color);
+}
+
+.completed {
+  text-decoration: line-through;
+  color: var(--text-color);
+}
