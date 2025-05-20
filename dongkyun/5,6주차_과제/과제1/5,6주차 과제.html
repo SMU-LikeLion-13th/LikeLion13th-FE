@@ -93,9 +93,10 @@
 
         // 완료 이벤트
         endBtn.addEventListener("click", () => {
-          li.style.textDecoration === "line-through"
-            ? ""
-            : "line-through";
+          li.style.textDecoration =
+            li.style.textDecoration === "line-through"
+              ? ""
+              : "line-through";
         });
 
         // 삭제 버튼
