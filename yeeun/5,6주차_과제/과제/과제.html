@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .box1{
+     width: 400px;
+      box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+      border-radius: 20px;
+      padding: 40px 40px;
+      text-align: center;
+    }
+    h2{
+      color:rgb(248, 164, 38);
+    }
+    .box2{
+      display: flex;
+      justify-content: center;
+      align-items: center; 
+    }
+    .liInput{
+      width: 400px;
+      height: 50px;
+      margin-left: 30px;
+      border-radius: 30px;
+      border: none;
+      background-color: rgb(209, 204, 198);
+      padding-left: 15px;
+    }
+    .liInput:focus {
+    outline: none;
+    }
+    .btn{
+      position: relative;
+      right: 40px;
+      width: 150px;
+      height: 55px;
+      border-radius: 30px;
+      border: none;
+      background-color:rgb(248, 164, 38);
+      color: white;
+    }
+    .todoList{
+       list-style: none;
+      padding: 0;
+      margin-top: 20px;
+      width: 350px; /* 입력창과 일치하는 너비 */
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .todoList li{
+       display: flex;
+       row-gap: 70px;
+       margin-left: 30px;
+      text-align: left;
+      width:300px;
+
+    }
+    .todoList input {
+      appearance: none;
+  
+      background-color: white;
+      border: 1px solid rgb(248, 164, 38);
+      width: 20px;
+      height: 16px;
+      border-radius: 50%;
+      cursor: pointer;
+      position: relative;
+      margin-right: 10px;
+      
+     
+    }
+    .todoList input:checked {
+     background-color:rgb(248, 164, 38);
+    border-color: rgb(248, 164, 38);
+     
+     
+    }
+    .todoList span{
+      width: 350px;
+      word-break: break-word;
+      
+    }
+    .todoList button{
+      
+      margin-left: 30px;
+       background-color: transparent;
+       border: none;
+        color: rgb(145, 144, 144);
+        font-weight: bold;
+      
+    }
+    
+    
+  </style>
+  <body>
+    <div class="box1">
+      <div>
+        <h2>ToDo List🦁</h2>
+        <div class="box2">
+          <input type="text" class="liInput" placeholder="     Add your text">
+          <button class="btn">Add</button>
+        </div>
+        <ul class="todoList">
+        </ul>
+      </div>
+
+      </div>
+    </div>
+    <script src="./과제.js"></script>
+  </body>
+
+
+
+  
+</html>
