@@ -1,0 +1,108 @@
+body {
+  font-family: "Pretendard", sans-serif;
+  background-color: #d5e8fc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.container {
+  background: #fefefe;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 400px;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.inputWrapper {
+  display: flex;
+  gap: 5px;
+}
+
+input[type="text"] {
+  flex: 1;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+button {
+  padding: 8px 12px;
+  border: none;
+  background-color: #d5e8fc;
+  color: #064488;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 20px;
+}
+
+li {
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid #efefef;
+  align-items: center;
+  background: #fff;
+  padding: 10px 12px;
+  margin-bottom: 10px;
+  border-radius: 6px;
+}
+
+.left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+input[type="checkbox"] {
+  appearance: none;
+  width: 16px;
+  height: 16px;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  display: grid;
+  place-content: center;
+  cursor: pointer;
+  margin: 0;
+}
+
+input[type="checkbox"]:checked {
+  background-color: #fef08a;
+  border-color: #713f12;
+}
+
+input[type="checkbox"]:checked::before {
+  content: "✔";
+  color: #713f12;
+  font-size: 12px;
+}
+
+.todo-text {
+  font-size: 16px;
+}
+
+.completed {
+  text-decoration: line-through;
+  color: #713f12;
+}
+
+.delete-btn {
+  background: none;
+  border: none;
+  color: #991b1b;
+  font-weight: bold;
+  font-size: 16px;
+  cursor: pointer;
+}
