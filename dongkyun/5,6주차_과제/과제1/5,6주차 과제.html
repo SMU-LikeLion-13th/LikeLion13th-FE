@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title>Todo List 🦁</title>
+    <style>
+      body {
+        background-color: wheat;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+      }
+      .card {
+        background-color: white;
+        padding: 40px;
+        border-radius: 20px;
+        box-shadow: 0 10px 10px gray;
+        width: 500px;
+        height: 200px;
+        max-width: 60%;
+      }
+      .title {
+        font-size: 24px;
+        font-weight: bold;
+        color: orange;
+        margin-bottom: 20px;
+      }
+      .input-container {
+        display: flex;
+        background-color: #f0f1f3;
+        border-radius: 50px;
+      }
+      .input-container input {
+        flex: 1;
+        border: none;
+        padding: 15px 20px;
+        background: transparent;
+      }
+      .add {
+        padding: 15px 30px;
+        border-radius: 50px;
+        border: none;
+        background-color: orange;
+        color: white;
+        cursor: pointer;
+        transition: background-color 0.2s ease;
+      }
+      .input-container button:hover {
+        background-color: sandybrown;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="card">
+      <div class="title">Todo List 🦁</div>
+      <div class="input-container">
+        <input type="text" placeholder="Add your text" />
+        <button class="add">Add</button>
+      </div>
+      <div>
+        <ul class="list"></ul>
+      </div>
+    </div>
+
+    <script>
+      const input = document.querySelector("input");
+      const button = document.querySelector("button");
+      const list = document.querySelector("ul");
+
+      button.onclick = addFunc;
+
+      function addFunc() {
+        // 빈 값
+        if (input.value === "") {
+          alert("할 일을 입력해주세요!");
+          input.focus();
+          return;
+        }
+
+        // 일정 추가
+        const li = document.createElement("li");
+        li.textContent = `${input.value} `;
+
+        // 완료 버튼
+        const endBtn = document.createElement("button");
+        endBtn.textContent = "완료";
+
+        // 완료 이벤트
+        endBtn.addEventListener("click", () => {
+          li.style.textDecoration =
+            li.style.textDecoration === "line-through"
+              ? ""
+              : "line-through";
+        });
+
+        // 삭제 버튼
+        const delBtn = document.createElement("button");
+        delBtn.textContent = "삭제";
+
+        // 삭제 이벤트
+        delBtn.onclick = () => {
+          li.remove();
+        };
+
+        li.appendChild(endBtn);
+        li.appendChild(delBtn);
+        list.appendChild(li);
+        input.value = "";
+        input.focus();
+      }
+    </script>
+  </body>
+</html>
