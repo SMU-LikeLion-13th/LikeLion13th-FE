@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Todo List</title>
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: #f0f2f5;
+      }
+      .container {
+        padding: 30px;
+        border-radius: 16px;
+        width: 400px;
+        background-color: white;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      }
+      h2 {
+        margin-bottom: 20px;
+        color: orange;
+      }
+      .input {
+        position: relative;
+        width: 100%;
+      }
+      .input input {
+        width: 100%;
+        padding: 12px 70px 12px 25px;
+        border-radius: 30px;
+        border: none;
+        font-size: 14px;
+        box-sizing: border-box;
+        background-color: #f0f0f0;
+      }
+      .input button {
+        position: absolute;
+        right: 0px;
+        top: 50%;
+        transform: translateY(-50%);
+        border: none;
+        padding: 11px 30px;
+        border-radius: 30px;
+        font-size: 15px;
+        color: white;
+        background-color: orange;
+      }
+      ul {
+        margin-top: 30px;
+        list-style: none;
+        padding: 0;
+      }
+      li {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px 10px;
+      }
+      .check-circle {
+        width: 10px;
+        height: 10px;
+        border: 2px solid orange;
+        border-radius: 50%;
+        margin-right: 10px;
+      }
+      .check-circle.checked {
+        background-color: orange;
+      }
+      .completed .task {
+        text-decoration: line-through;
+        color: gray;
+      }
+      .task-content {
+        display: flex;
+        align-items: center;
+        flex: 1;
+      }
+      .delete-btn {
+        background: none;
+        border: none;
+        color: gray;
+        font-size: 15px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h2>Todo List 🦁</h2>
+      <div class="input">
+        <input type="text" id="Input" placeholder="Add your text" />
+        <button onclick="addTodo()">Add</button>
+      </div>
+      <ul id="List"></ul>
+    </div>
+
+    <script src="lion_0506.js"></script>
+  </body>
+</html>

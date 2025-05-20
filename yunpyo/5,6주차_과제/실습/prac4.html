@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #shape {
+        width: 200px;
+        height: 200px;
+        background-color: blue;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="shape"></div>
+    <button onclick="rec()">사각형</button>
+    <button onclick="circle()">원</button>
+
+    <script>
+      const i = document.getElementById("shape");
+      function rec() {
+        i.style.backgroundColor = "orange";
+        i.style.width = "400px";
+      }
+      function circle() {
+        i.style.borderRadius = "50%";
+      }
+    </script>
+  </body>
+</html>
