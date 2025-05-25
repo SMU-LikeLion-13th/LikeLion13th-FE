@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>당신의 다음 영화는?</title>
+    <link rel="stylesheet" href="../style/movie.css" />
+    <style>
+      .main-section {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        min-height: 100vh;
+        color: #ff5145;
+        background-color: #111;
+      }
+
+      .main-title {
+        font-size: 45px;
+        font-weight: bold;
+        margin-bottom: 30px;
+      }
+
+      .main-lit {
+        font-size: 1.2rem;
+        margin-bottom: 30px;
+        color: #ffffff;
+      }
+
+      .btn-go {
+        padding: 10px 20px;
+        font-size: 11pt;
+        font-weight: bold;
+        border-radius: 10px;
+        cursor: pointer;
+        color: #000000;
+        background-color: #ff8c8c;
+      }
+
+      .btn-go:hover {
+        background-color: #ff3e30;
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="nav-container">
+        <a href="../pages/index.html">홈</a>
+        <a href="../pages/movie.html">인기 영화 목록</a>
+      </div>
+    </nav>
+
+    <section class="main-section">
+      <div class="main-title">당신의 다음 영화는?</div>
+      <div class="main-lit">
+        전 세계 인기 영화부터, 지금 놓치면 안 될 명작까지.<br />
+        감성적인 영화 탐험을 지금 시작하세요.
+      </div>
+      <a href="movie.html">
+        <button class="btn-go">인기 영화 보러가기</button>
+      </a>
+    </section>
+  </body>
+</html>
