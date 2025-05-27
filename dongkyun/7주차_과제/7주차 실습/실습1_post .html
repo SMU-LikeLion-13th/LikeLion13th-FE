@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+
+    <title>fetch POST 실습</title>
+    <link rel="stylesheet" href="./실습1.css" />
+  </head>
+
+  <body>
+    <h2>POST 요청으로 게시글 전송</h2>
+    <div class="form">
+      <form id="postForm">
+        <input
+          type="text"
+          id="title"
+          placeholder="제목을 입력하세요"
+          required
+        />
+
+        <input
+          type="text"
+          id="body"
+          placeholder="내용을 입력하세요"
+          required
+        />
+
+        <button type="submit">전송</button>
+      </form>
+    </div>
+
+    <pre id="postResult">응답 결과가 여기에 표시됩니다</pre>
+
+    <script>
+      //폼 제출 시 이벤트 처리 할 수 있도록
+
+      const postResult = document.getElementById("postResult");
+
+      document
+        .getElementById("postForm")
+        .addEventListener("submit", (e) => {
+          e.preventDefault(); // 기본 폼 제출(페이지 새로고침) 방지
+
+          const title = document.getElementById("title").value;
+          const body = document.getElementById("body").value;
+
+          fetch("https://jsonplaceholder.typicode.com/posts", {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+              title: title,
+              body: body,
+              userId: 1,
+            }),
+          })
+            .then((response) => {
+              return response.json();
+            })
+            .then((data) => {
+              console.log("data", data);
+              document.getElementById("postResult").innerText =
+                JSON.stringify(data, null, 2);
+              // null : replacer : 	모든 프로퍼티 포함 (기본 동작)
+              // ["title", "body"] 일 경우 title, body 키의 값만 추출
+            })
+            .catch((error) => console.log("error", error));
+        });
+    </script>
+  </body>
+</html>
