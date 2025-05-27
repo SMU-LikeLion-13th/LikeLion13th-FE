@@ -1,5 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
   const btn = document.getElementById("btn");
+  const token =
+    "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJiZWNkNmM5OTE2YzM4MzQyZDA5NDIyZmE2ZDViMjgwYyIsIm5iZiI6MTczOTUxMzAwNi44ODYwMDAyLCJzdWIiOiI2N2FlZGNhZTZkMWE3YjYwNTIzYjU5N2EiLCJzY29wZXMiOlsiYXBpX3JlYWQiXSwidmVyc2lvbiI6MX0.z7-i8ep4YlWqLy_BQWlEWIsoCA7bhj2kq0axLZTTgnE";
   if (btn) {
     btn.addEventListener("click", () => {
       window.location.href = "movie.html";
@@ -9,13 +11,12 @@ document.addEventListener("DOMContentLoaded", () => {
       method: "GET",
       headers: {
         accept: "application/json",
-        Authorization:
-          "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJiZWNkNmM5OTE2YzM4MzQyZDA5NDIyZmE2ZDViMjgwYyIsIm5iZiI6MTczOTUxMzAwNi44ODYwMDAyLCJzdWIiOiI2N2FlZGNhZTZkMWE3YjYwNTIzYjU5N2EiLCJzY29wZXMiOlsiYXBpX3JlYWQiXSwidmVyc2lvbiI6MX0.z7-i8ep4YlWqLy_BQWlEWIsoCA7bhj2kq0axLZTTgnE",
+        Authorization: token,
       },
     };
 
     fetch(
-      "https://api.themoviedb.org/3/movie/popular?language=en-US&page=1",
+      "https://api.themoviedb.org/3/movie/popular?language=ko-KR&page=1",
       options
     )
       .then((res) => res.json())
@@ -29,7 +30,7 @@ document.addEventListener("DOMContentLoaded", () => {
           //movie는 results배열안에 있는 영화정보를 담고있는 객체체
           const card = document.createElement("div");
           card.className = "card";
-          card.innerHTML = `
+          card.innerHTML = ` language=ko-KR
                            <img src="https://image.tmdb.org/t/p/w200${movie.poster_path}" >
                             <div class="info">
                             <h3>${movie.title}</h3>
