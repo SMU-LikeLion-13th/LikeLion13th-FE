@@ -50,6 +50,7 @@ header {
   font-size: 16px;
 }
 
+/* 메인 */
 .main-content {
   flex: 1;
   display: flex;
@@ -92,6 +93,7 @@ header {
   transition: all 0.3s ease;
 }
 
+/* footer */
 .footer {
   text-align: center;
   padding: 16px;
