@@ -50,7 +50,7 @@ body {
 
 .right-section {
   flex: 1;
-  background: url("/7주차_과제/coolguy.png") no-repeat center center;
+  background: url("../coolguy.png") no-repeat center center;
   background-size: cover;
 }
 
