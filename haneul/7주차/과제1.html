@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TMDB 인기 영화</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: "Segoe UI", sans-serif;
+        background-color: #121212;
+        color: #fff;
+      }
+
+      header {
+        background-color: #1a1a1a;
+        padding: 14px 30px;
+      }
+
+      nav ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        gap: 30px;
+      }
+
+      nav a {
+        text-decoration: none;
+        color: skyblue;
+        font-weight: bold;
+        font-size: 1rem;
+        cursor: pointer;
+      }
+
+      .btn {
+        width: 150px;
+        height: 40px;
+        background-color: skyblue;
+        color: #000;
+        border-radius: 20px;
+        text-decoration: none;
+        font-weight: bold;
+        transition: background-color 0.3s ease;
+      }
+
+      .movie-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        padding: 20px;
+        text-align: center;
+      }
+
+      .movie-container h1 {
+        color: skyblue;
+        font-size: 2rem;
+      }
+
+      .movie-container p {
+        font-size: 1rem;
+      }
+
+      .movie-list {
+        display: none;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+        padding: 40px 20px;
+      }
+
+      .movie {
+        position: relative;
+        width: 200px;
+        border-radius: 10px;
+        overflow: hidden;
+        background-color: #1e1e1e;
+        transition: transform 0.3s;
+      }
+
+      .movie img {
+        width: 100%;
+        height: 300px;
+        object-fit: cover;
+        display: block;
+      }
+
+      .movie-info {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        padding: 10px;
+        background: rgba(0, 0, 0, 0.75);
+        color: white;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+      }
+
+      .movie:hover .movie-info {
+        opacity: 1;
+      }
+
+      .movie-info h3 {
+        text-align: center;
+        margin-top: 50%;
+        font-size: 1.5rem;
+        color: skyblue;
+      }
+
+      .movie-info p {
+        text-align: center;
+        font-size: 1rem;
+        color: #ccc;
+      }
+
+      @media (max-width: 600px) {
+        .movie {
+          width: 100%;
+          max-width: 300px;
+        }
+        .movie img {
+          height: auto;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li><a onclick="showHome()">홈</a></li>
+          <li><a onclick="showMovies()">인기 영화 목록</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <div class="movie-container" id="intro">
+      <h1>당신의 다음 영화는?</h1>
+      <p>
+        전 세계 인기 영화부터, 지금 놓치면 안 될 명작까지.<br />
+        감성적인 영화 탐험을 지금 시작하세요.
+      </p>
+      <button class="btn" onclick="showMovies()">인기 영화 보러가기</button>
+    </div>
+
+    <div class="movie-list" id="movieList"></div>
+
+    <script>
+      const API_KEY = "014da622e564d337d40ca89b37f0d024";
+      const url = `https://api.themoviedb.org/3/movie/popular?api_key=${API_KEY}&language=ko-KR&page=1`;
+
+      function showHome() {
+        document.getElementById("intro").style.display = "flex";
+        document.getElementById("movieList").style.display = "none";
+      }
+
+      function showMovies() {
+        document.getElementById("intro").style.display = "none";
+        const movieList = document.getElementById("movieList");
+        movieList.style.display = "flex";
+
+        if (movieList.childElementCount > 0) return; // 이미 로딩된 경우 다시 fetch하지 않음
+
+        fetch(url)
+          .then((res) => res.json())
+          .then((data) => {
+            const movies = data.results;
+
+            movies.forEach((movie) => {
+              const movieEl = document.createElement("div");
+              movieEl.classList.add("movie");
+
+              movieEl.innerHTML = `
+              <img src="https://image.tmdb.org/t/p/w500${movie.poster_path}" alt="${movie.title}">
+              <div class="movie-info">
+                <h3>${movie.title}</h3>
+                <p>
+                  별점: ${movie.vote_average} <br /> 개봉봉: ${movie.release_date}
+                  </p>
+              </div>
+            `;
+              movieList.appendChild(movieEl);
+            });
+          })
+          .catch((error) => {
+            console.error("영화 데이터를 불러오는 데 실패했습니다:", error);
+          });
+      }
+    </script>
+  </body>
+</html>
