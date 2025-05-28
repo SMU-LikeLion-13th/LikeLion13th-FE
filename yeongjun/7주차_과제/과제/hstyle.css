@@ -1,0 +1,103 @@
+/* 기본 리셋 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* 애니메이션 키프레임 정의 */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  opacity: 0;
+  animation: fadeInUp 0.8s ease-out forwards;
+  animation-delay: 0.2s;
+  animation-fill-mode: forwards;
+}
+
+body {
+  background-color: #0d0d0d;
+  color: white;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* 헤더 */
+header {
+  background-color: #1a1a1a;
+  padding: 1rem 2rem;
+}
+
+.navbar {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-link {
+  color: #aff58e;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+/* 메인 */
+.main-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 40px;
+}
+
+.main-title {
+  font-size: 36px;
+  font-weight: bold;
+  color: #6ee039;
+  margin-bottom: 30px;
+}
+
+.main-article {
+  font-size: 16px;
+  color: #ccc;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.main-button {
+  background-color: #aff58e;
+  color: black;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 30px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  opacity: 1;
+  transition: all 0.3s ease;
+}
+.main-button:hover {
+  background-color: #345e21;
+  transform: scale(1.03);
+  transition: all 0.3s ease;
+}
+
+/* footer */
+.footer {
+  text-align: center;
+  padding: 16px;
+  font-size: 14px;
+  color: #888;
+  background-color: #111;
+}
